@@ -31,6 +31,6 @@ spec:
     spec:
       containers:
       - name: app
-        image: borkarrohit/maven-app:4a572f5a259180536c579c19b8ebd12c00b36e13
+        image: IMAGE
         ports:
         - containerPort: 3300
