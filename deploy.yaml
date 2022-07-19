@@ -32,6 +32,7 @@ spec:
   ports:
   - protocol: TCP
     port: 8080
+    nodePort: 30030
     name: http
   selector:
     app: app
