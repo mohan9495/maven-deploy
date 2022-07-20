@@ -5,7 +5,7 @@ metadata:
   labels:
     app: app
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: app
@@ -18,7 +18,7 @@ spec:
       - name: app
         image: borkarrohit/tekton-argocd:1
         ports:
-        - containerPort: 8080
+        - containerPort: 80
 ---
 
 apiVersion: v1
@@ -28,11 +28,9 @@ metadata:
   labels:
     app: app
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
-  - protocol: TCP
-    port: 8080
-    nodePort: 30030
-    name: http
+    - port: 80
+      name: app
   selector:
     app: app
