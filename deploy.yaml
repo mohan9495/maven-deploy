@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: app
-        image: IMAGE
+        image: borkarrohit/tekton-argocd:1
         ports:
         - containerPort: 8080
 ---
